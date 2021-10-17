@@ -11,18 +11,22 @@ A web C/C++ compiler that uses the Python Flask architecture in Ubuntu system an
 
 原授課教授使用的方法是自行開發Java JDK版本的桌面程式，因版本老舊而維護不易(還有為了避免學生惡意破壞額外加了大量手段)，我們要使用學校內網和容器(Container)的機制重新設計架構，以達到不容易破壞(學校內網、皆於容器上運行)、查找問題容易(利用Log)的目的。
 
-# 面對對象和其他設定
+故整體框架是利用Python的Flask套件架設網站，這樣可以很好管理不同html和學生登入機制，同時網頁提交時只會讀入字串傳到伺服器，再利用已經設定好的容器執行編譯和回傳結果(編譯錯誤或是執行結果)。
 
-我預設有一定資工基礎，
+# 面對對象和其他設定 
+
+預設對象是有一定資工基礎
+
+以下是使用版本
+
+
 
 # 成果展示
 
 成果簡單內部展示
-
 ![HI示範](https://user-images.githubusercontent.com/29775017/137617775-c5eb0e9a-bf05-48c6-9659-329943534310.JPG)
 
 成果簡單外部展示
-
 ![HI示範外部](https://user-images.githubusercontent.com/29775017/137617786-19545e5c-9fc9-4dd9-8650-fdb007f5ff2f.JPG)
 
 可以看到本地IP 0.0.0.0，port 5618 有簡單的展示，外部連線方式可利用ifconfig先確認此Ubuntu IP 即可直接訪問，
