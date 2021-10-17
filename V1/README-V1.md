@@ -4,6 +4,8 @@
 
 2.提交程式碼送出即可得到執行結果
 
+![結果](https://user-images.githubusercontent.com/29775017/137636943-69c55953-6eab-4488-a888-caeae0f59ab0.JPG)
+
 
 ## 實作細節
 
@@ -23,11 +25,17 @@ Dockerfile(唯一名稱 開頭D大寫其餘小寫)是外部測試及範例，onS
 
 Dockerfile 每次執行(直接執行)都會產生新的image去，範例中就是用安裝好的gcc名稱的image，然後複製我們事先存好的使用者字串做的cpp檔，再編譯並直接執行。
 
+![nweimages](https://user-images.githubusercontent.com/29775017/137636995-b720d390-3277-4cda-8d7e-17626a3b2602.JPG)
+
 ### oneStudent
 
 oneStudent是為了不讓多個使用者混淆的函數，利用python 套件subprocess，可模擬我們利用ubuntu cmd操作，還有Peop等方法，但我試過認為這個最簡單好用，可以選擇不回傳有沒有成功的資訊或是shell=True執行permission denied的狀況。
 
 先創建該學號資料夾並複製cpp檔案，再創建Dockerfile寫入剛剛測試成功的資訊，利用剛剛創建的Dockerfile(build指令會自己找同位置的Dockerflie)，再把回傳資料做分割留下需要的就好，最後利用grep找到剛剛創建的image(Dockerfile 創建的容器默認執行成功會關掉，故若有問題需要手動刪除或是利用try關掉一勞永逸)，再把他移除掉 rmi(意義remove image，刪掉container是rm)，最後回到上層資料夾，就可以回傳結果。
+
+![有問題要刪掉CONTAINER](https://user-images.githubusercontent.com/29775017/137636982-f0ad2b86-7cbc-4e74-8236-c5e415afdaee.JPG)
+![查詢CONTAINER_id再刪掉](https://user-images.githubusercontent.com/29775017/137636984-643a64fb-e7ac-4c4a-b0dd-48400176387f.JPG)
+
 
 ### server
 
@@ -40,6 +48,8 @@ oneStudent是為了不讓多個使用者混淆的函數，利用python 套件sub
 的方式取
 
 debug模式可以在開發時遇到問題出現類似下圖，不會無動於衷，很好用!
+
+![有錯誤](https://user-images.githubusercontent.com/29775017/137636960-52833d00-0cb3-4da6-89ab-a639b184ef9d.JPG)
 
 ```app.config["JSON_AS_ASCII"] = False```可以解決傳遞字串亂碼的問題
 
