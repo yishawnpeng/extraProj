@@ -1,0 +1,25 @@
+
+<html>
+    <head>
+        <h2>Wellowcom to CAL</h2>
+    </head>
+    <body>
+        <h3>請注意!輸入會自動換行</h3>
+        <form method="POST">
+            <div style="display: flex; justify-content: space-between;">
+                <div style="width:50% ">
+                    <textarea name="code" id="code" style="width: 700;height: 400;"
+                    required>{{code}}</textarea>
+                </div>
+                <div style="width:50%">
+                    <textarea name="codeO" id="codeO" style="width: 700;height: 400;"
+                    required>{{result}}</textarea>
+                </div>
+            </div>
+            </br></br>
+            <div>
+                <p><input type="submit" name ="send" id="code" value="確認送出" >{{isSuccess}}</p>
+            </div>
+        </form>
+    </body>
+</html>
