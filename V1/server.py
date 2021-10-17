@@ -33,5 +33,5 @@ if __name__ == "__main__":
 	app.config["DEBUG"] = True # if online this need to be false 
 	app.config["JSON_AS_ASCII"] = False
 	sess.init_app(app)
-	app.run(host="0.0.0.0",port=5000)
+	app.run(host="0.0.0.0",port=5618)
 	
