@@ -19,14 +19,18 @@ A web C/C++ compiler that uses the Python Flask architecture in Ubuntu system an
 
 以下是使用版本
 
+![pythonversion](https://user-images.githubusercontent.com/29775017/137619269-c692cc7f-8a8c-402b-9ebd-06bde6db670d.JPG)
 
+![dockeversion](https://user-images.githubusercontent.com/29775017/137619272-9ec1ba13-4fa0-4d43-86b6-b61c19a2377d.JPG)
 
 # 成果展示
 
 成果簡單內部展示
+
 ![HI示範](https://user-images.githubusercontent.com/29775017/137617775-c5eb0e9a-bf05-48c6-9659-329943534310.JPG)
 
 成果簡單外部展示
+
 ![HI示範外部](https://user-images.githubusercontent.com/29775017/137617786-19545e5c-9fc9-4dd9-8650-fdb007f5ff2f.JPG)
 
 可以看到本地IP 0.0.0.0，port 5618 有簡單的展示，外部連線方式可利用ifconfig先確認此Ubuntu IP 即可直接訪問，
