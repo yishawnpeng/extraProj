@@ -31,6 +31,12 @@ python套件有os, flask, subprocess
 
 ```apt-get install python-pip```
 
+要架設的ubuntu下載好Docker之後(網路很多Docker教學這是[其一](https://ithelp.ithome.com.tw/articles/10199339))
+
+使用的[image](https://hub.docker.com/_/gcc?tab=description)是官方提供，或是在cmd裡面輸入即可下載
+
+```docker pull gcc```
+
 
 # 成果展示
 
