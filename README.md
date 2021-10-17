@@ -23,6 +23,15 @@ A web C/C++ compiler that uses the Python Flask architecture in Ubuntu system an
 
 ![dockeversion](https://user-images.githubusercontent.com/29775017/137619272-9ec1ba13-4fa0-4d43-86b6-b61c19a2377d.JPG)
 
+python套件有os, flask, subprocess
+
+```pip3 insatll os```其餘類推
+
+若沒有管理套件pip3，則先upgrade和update再執行
+
+```apt-get install python-pip```
+
+
 # 成果展示
 
 成果簡單內部展示
