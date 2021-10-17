@@ -48,6 +48,3 @@ def compileOneTime( studentID ) :
 	os.chdir("/home/cycuigopher/桌面/10977030-test")
 	
 	return output
-	#delete dir
-	#subprocess.Popen(["rm", "-rf", "/home/cycuigopher/桌面/cal/"+studentID]) #force
-	#subprocess.check_output("sudo rm -rf /home/cycuigopher/桌面/cal/"+imageIDwithName, shell=True)
