@@ -3,6 +3,10 @@
 
 A web C/C++ compiler that uses the Python Flask architecture in Ubuntu system and runs on Docker container
 
+# 製作目的
+
+利用課外時間幫忙母校資工系重新架構C/C++的編譯器，因為以前沿用多年的方式因為原授課教授要退休，之後是我的指導教授來開班，故在畢業之後主動要求設計最原始的架構，
+
 成果簡單內部展示
 
 ![HI示範](https://user-images.githubusercontent.com/29775017/137617775-c5eb0e9a-bf05-48c6-9659-329943534310.JPG)
