@@ -1,0 +1,112 @@
+
+<!--
+-->
+<style type="text/css">
+ #codeTextarea{width: 500px;height: 310px;}
+.textAreaWithLines{font-family: courier;border: 1px solid #ddd;}
+.textAreaWithLines textarea,.textAreaWithLines div{border: 0px;line-height: 120%;font-size: 12px;}
+.lineObj{color: #666;}
+</style>
+
+
+
+
+<script>
+    const data = document.getElementById('inputFile');
+    data.addEventListener('change', (event) => {
+        const filelist = event.target.files;
+        console.log('files', filelist);
+    });
+
+    function fileUpload(file){
+        var mess=file[0];
+        var file=new FileReader();
+        file.readAsText(mess,'UTF-8');
+        file.onload=function(e){
+            var code=e.target.result;
+            document.getElementById("code").innerText+=code;
+        }
+    }
+    
+	
+	
+</script>
+
+<script type="text/javascript">
+// textarea w/ number
+	var lineObjOffsetTop = 2;
+	function createTextAreaWithLines(id)
+	{
+	   var el = document.createElement('DIV');
+	   var ta = document.getElementById(id);
+	   ta.parentNode.insertBefore(el,ta);
+	   el.appendChild(ta);
+	   el.className='textAreaWithLines';
+	   el.style.width = (ta.offsetWidth + 30) + 'px';
+	   ta.style.position = 'absolute';
+	   ta.style.left = '30px';
+	   el.style.height = (ta.offsetHeight + 2) + 'px';
+	   el.style.overflow='hidden';
+	   el.style.position = 'relative';
+	   el.style.width = (ta.offsetWidth + 30) + 'px';
+	   var lineObj = document.createElement('DIV');
+	   lineObj.style.position = 'absolute';
+	   lineObj.style.top = lineObjOffsetTop + 'px';
+	   lineObj.style.left = '0px';
+	   lineObj.style.width = '27px';
+	   el.insertBefore(lineObj,ta);
+	   lineObj.style.textAlign = 'right';
+	   lineObj.className='lineObj';
+	   var string = '';
+	   for(var no=1;no<2000;no++){
+		  if(string.length>0)string = string + '<br>';
+		  string = string + no;
+		}
+		  ta.onkeydown = function() { positionLineObj(lineObj,ta); };
+		  ta.onmousedown = function() { positionLineObj(lineObj,ta); };
+		  ta.onscroll = function() { positionLineObj(lineObj,ta); };
+		  ta.onblur = function() { positionLineObj(lineObj,ta); };
+		  ta.onfocus = function() { positionLineObj(lineObj,ta); };
+		  ta.onmouseover = function() { positionLineObj(lineObj,ta); };
+		  lineObj.innerHTML = string;
+	   }
+	function positionLineObj(obj,ta)
+	{
+		  obj.style.top = (ta.scrollTop * -1 + lineObjOffsetTop) + 'px';   
+	}
+</script>
+
+
+
+<html>
+    <head>
+        <h2>Wellowcom to CAL</h2>
+    </head>
+    <body>
+        <h3>請注意!輸入會自動換行</h3>
+        <form method="POST">
+            <div style="display: flex; justify-content: space-between;">
+                <div style="width:50% ">
+                    <textarea name="code" id="code" style="resize:none;width: 500px;height: 310px;" placeholder ="請輸入或上傳程式碼"
+                    required>{{code}}</textarea>
+					<script type="text/javascript">
+						createTextAreaWithLines('code');
+					</script>
+                </div>
+                <div style="width:50%">
+                    <textarea name="codeO" id="codeO" style="resize:none;width: 80%;height: 310px"
+                    required>{{result}}</textarea>
+                </div>
+            </div>
+            </br></br>
+			 
+            <!--div>
+                <input type="file" id="inputFile" accept=".txt,.cpp,.c" onChange="fileUpload(this.files)">
+            </div-->
+            </br></br>
+            <div>
+                <p><input type="submit" name ="send" id="code" value="確認送出" >{{isSuccess}}</p>
+            </div>
+        </form>
+    </body>
+</html>
