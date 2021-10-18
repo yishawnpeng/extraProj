@@ -28,7 +28,7 @@ docker 的指令可以讓你在server.py啟動的時候還是可以在容器裡�
 
 ### Dockerfile
 
-Dockerfile 每次執行(直接執行)都會產生新的image去，範例中就是用安裝好的gcc名稱的image，然後複製我們事先存好的使用者字串做的cpp檔，再編譯並直接執行。
+Dockerfile 每次執行(直接執行)都會產生新的image去執行你的指令(我的範例有改變路徑、複製檔案、執行cmd)，範例中就是用安裝好的gcc名稱的image，然後複製我們事先存好的使用者字串做的cpp檔，再編譯並直接執行。
 
 ![nweimages](https://user-images.githubusercontent.com/29775017/137636995-b720d390-3277-4cda-8d7e-17626a3b2602.JPG)
 
