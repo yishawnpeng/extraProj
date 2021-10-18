@@ -16,6 +16,10 @@
 
 Dockerfile(唯一名稱 開頭D大寫其餘小寫)是外部測試及範例，onStudent.py會被server.py導入進去(import)。
 
+### exec
+
+docker 的指令可以讓你在server.py啟動的時候還是可以在容器裡面做事(另開cmd的概念)
+
 ### HTML
 
 .html盡量和原始程式碼分開，這是一種開發習慣同時相對路徑好設定。
